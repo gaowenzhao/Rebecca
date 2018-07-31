@@ -5,28 +5,28 @@ import android.support.v7.app.AppCompatActivity
 import com.rebecca.lib.zbase.ICreate
 
 abstract class BaseKtActivity : AppCompatActivity(), ICreate {
-				//=========================  =================================
-				abstract var mLayoutId: Int
-				//=========================  =================================
-				val mTag = javaClass.simpleName
+    //=========================  =================================
+    abstract var mLayoutId: Int
+    //=========================  =================================
+    val mTag = javaClass.simpleName
 
-				var isDebug = false
-				//=========================  =================================
+    var isDebug = false
+    //=========================  =================================
 
-				override fun onInit() {
-								onInitView()
-								onInitData()
-				}
+    override fun onInit() {
+        onInitView()
+        onInitData()
+    }
 
-				override fun onInitView() {
-				}
+    override fun onInitView() {
+    }
 
-				override fun onInitData() {
-				}
+    override fun onInitData() {
+    }
 
-				//=========================main ==================================
-				override fun onCreate(savedInstanceState: Bundle?) {
-								super.onCreate(savedInstanceState)
-								onInit()
-				}
+    //=========================main ==================================
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        onInit()
+    }
 }

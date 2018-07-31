@@ -4,9 +4,9 @@ import android.arch.lifecycle.ViewModel
 
 abstract class BaseVM : ViewModel() {
 
-				//lateinit var bean: B
+    //lateinit var bean: B
 
-				open val mTag = javaClass.simpleName
+    open val mTag = javaClass.simpleName
 
-				open var isDebug = false
+    open var isDebug = false
 }

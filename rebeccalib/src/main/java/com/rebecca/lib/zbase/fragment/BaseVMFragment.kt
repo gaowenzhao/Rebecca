@@ -10,23 +10,23 @@ import android.view.View
 import android.view.ViewGroup
 
 abstract class BaseVMFragment<V : ViewDataBinding, VM : ViewModel> : BaseLazyFragment() {
-				lateinit var ui: V
-				lateinit var vm: VM
-				//=========================  =================================
+    lateinit var ui: V
+    lateinit var vm: VM
+    //=========================  =================================
 
-				//=========================  =================================
+    //=========================  =================================
 
-				//=========================init  =================================
-				open fun createVM(modelClass: Class<VM>): VM {
-								vm = ViewModelProviders.of(this).get(modelClass)
-								return vm
-				}
+    //=========================init  =================================
+    open fun createVM(modelClass: Class<VM>): VM {
+        vm = ViewModelProviders.of(this).get(modelClass)
+        return vm
+    }
 
-				override fun onCreateRootView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-								ui = DataBindingUtil.inflate(inflater, mLayoutId, container, false)
-								ui.setLifecycleOwner(this)
-								return ui.root
-				}
+    override fun onCreateRootView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        ui = DataBindingUtil.inflate(inflater, mLayoutId, container, false)
+        ui.setLifecycleOwner(this)
+        return ui.root
+    }
 
-				//=========================main ==================================
+    //=========================main ==================================
 }
