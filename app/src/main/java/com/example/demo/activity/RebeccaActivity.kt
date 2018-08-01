@@ -4,6 +4,7 @@ import android.view.View
 import com.example.demo.R
 import com.example.demo.bean.RebeccaUser
 import com.example.demo.databinding.RebeccaActivityBinding
+import com.example.demo.dialog.fragment.MaterialDialogFragment
 import com.example.demo.fragment.RebeccaFragment
 import com.example.demo.vm.RebeccaVM
 import com.rebecca.lib.zbase.activity.BaseVMActivity
@@ -23,9 +24,9 @@ class RebeccaActivity(override var mLayoutId: Int = R.layout.rebecca_activity) :
     }
 
     //=========================  =================================
-    var rebeccaClicker: RebeccaClicker = object : RebeccaClicker() {
+    var rebeccaClicker: RebeccaClicker = object : RebeccaClicker {
         override fun onClick(v: View?) {
-            super.onClick(v)
+
             when (v) {
                 ui.rlInclude.bt_login -> {
                     var isLogin: Boolean = vm.isLogin.value!!
@@ -33,6 +34,7 @@ class RebeccaActivity(override var mLayoutId: Int = R.layout.rebecca_activity) :
                 }
                 ui.rlInclude.bt_register -> {
                     vm.showBean()
+                    MaterialDialogFragment().show(supportFragmentManager, "material")
                 }
             }
         }

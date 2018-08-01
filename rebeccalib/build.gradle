@@ -36,7 +36,9 @@ dependencies {
     //okhttp
     api 'com.squareup.okhttp3:okhttp:3.11.0'
     //retrofit
-
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
     //pix
     api 'com.facebook.fresco:fresco:1.10.0'
     api 'com.facebook.fresco:imagepipeline-okhttp3:1.10.0'
