@@ -14,7 +14,6 @@ abstract class BaseKtDialogFragment : DialogFragment(), ICreate {
 
     //=========================  =================================
 
-
     //========================= init  =================================
     override fun onInit() {
         onInitView()
@@ -26,8 +25,6 @@ abstract class BaseKtDialogFragment : DialogFragment(), ICreate {
 
     override fun onInitView() {
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -18,7 +18,7 @@ class RebeccaFragment : BaseVMFragment<RebeccaFragmentBinding, RebeccaVM>() {
         user.userName.postValue("Rebecca")
         user.userPassword.postValue("0000")
         user.userInfo.postValue("my name is Rebecca")
-        //vm.bean.postValue(user)
+
         vm.bean = user
         return vm
     }

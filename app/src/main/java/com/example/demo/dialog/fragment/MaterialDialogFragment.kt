@@ -17,8 +17,7 @@ class MaterialDialogFragment : BaseVMDialogFragment<MaterialDialogFragmentBindin
             ui.btApply -> {
                 age++
                 vm.age = age.toString()
-                //vm.info.postValue(vm.string)
-                //ui.vm = vm
+
                 vm.info.postValue(" age:" + vm.age)
             }
         }
@@ -27,14 +26,15 @@ class MaterialDialogFragment : BaseVMDialogFragment<MaterialDialogFragmentBindin
 
     override fun createVM(modelClass: Class<MaterialDialogVM>): MaterialDialogVM {
         super.createVM(modelClass)
-        vm.title.postValue("自定义标题")
+        vm.title.value = "自定义标题"
         vm.info.postValue("信息")
-        //vm.string = "4654"
+
         return vm
     }
 
     override fun onInitView() {
         super.onInitView()
+
         ui.vm = createVM(MaterialDialogVM::class.java)
         ui.clicker = this
         dialog.setTitle(vm.title.value)

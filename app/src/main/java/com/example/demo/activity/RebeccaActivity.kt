@@ -48,7 +48,7 @@ class RebeccaActivity(override var mLayoutId: Int = R.layout.rebecca_activity) :
         user.userName.postValue("Rebecca")
         user.userPassword.postValue("123456")
         user.userInfo.postValue("my name is Rebecca")
-        //vm.bean.postValue(user)
+
         vm.bean = user
         return vm
     }
