@@ -8,7 +8,7 @@
 
 								<variable
 												name="clicker"
-												type="com.example.demo.activity.RebeccaClicker"/>
+												type="com.example.demo.activity.Clicker"/>
 				</data>
 
 				<LinearLayout

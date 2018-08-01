@@ -24,7 +24,7 @@ class RebeccaActivity(override var mLayoutId: Int = R.layout.rebecca_activity) :
     }
 
     //=========================  =================================
-    var rebeccaClicker: RebeccaClicker = object : RebeccaClicker {
+    var rebeccaClicker: Clicker = object : Clicker {
         override fun onClick(v: View?) {
 
             when (v) {

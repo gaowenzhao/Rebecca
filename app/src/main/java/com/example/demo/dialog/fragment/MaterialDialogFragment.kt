@@ -2,12 +2,12 @@ package com.example.demo.dialog.fragment
 
 import android.view.View
 import com.example.demo.R
-import com.example.demo.activity.RebeccaClicker
+import com.example.demo.activity.Clicker
 import com.example.demo.databinding.MaterialDialogFragmentBinding
 import com.example.demo.dialog.vm.MaterialDialogVM
 import com.rebecca.lib.dialog.fragment.BaseVMDialogFragment
 
-class MaterialDialogFragment : BaseVMDialogFragment<MaterialDialogFragmentBinding, MaterialDialogVM>(), RebeccaClicker {
+class MaterialDialogFragment : BaseVMDialogFragment<MaterialDialogFragmentBinding, MaterialDialogVM>(), Clicker {
     //=========================  =================================
     var age = 0
     override var mLayoutId: Int = R.layout.material_dialog_fragment
