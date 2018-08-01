@@ -21,7 +21,6 @@ android {
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-
     api "com.android.support:appcompat-v7:$tool_version"
     api "com.android.support:recyclerview-v7:$tool_version"
     api "com.android.support:cardview-v7:$tool_version"
@@ -33,6 +32,7 @@ dependencies {
     api 'com.android.support.test.espresso:espresso-core:3.0.2'
     //rxjava
     api 'io.reactivex.rxjava2:rxjava:2.1.16'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
     //okhttp
     api 'com.squareup.okhttp3:okhttp:3.11.0'
     //retrofit
@@ -43,8 +43,8 @@ dependencies {
     api 'com.facebook.fresco:fresco:1.10.0'
     api 'com.facebook.fresco:imagepipeline-okhttp3:1.10.0'
     //livedata
-    api "android.arch.lifecycle:runtime:1.1.1"
-    api "android.arch.lifecycle:extensions:1.1.1"
+    api 'android.arch.lifecycle:runtime:1.1.1'
+    api 'android.arch.lifecycle:extensions:1.1.1'
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
 
 }
