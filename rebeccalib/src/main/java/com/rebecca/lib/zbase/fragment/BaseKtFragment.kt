@@ -19,6 +19,8 @@ abstract class BaseKtFragment : Fragment(), ICreate {
 
     //=========================  =================================
 
+    //========================= init =================================
+
     abstract fun onCreateRootView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
 
     override fun onInit() {
@@ -43,5 +45,10 @@ abstract class BaseKtFragment : Fragment(), ICreate {
             parent.removeView(mRootView)
         }
         return mRootView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        onInit()
     }
 }

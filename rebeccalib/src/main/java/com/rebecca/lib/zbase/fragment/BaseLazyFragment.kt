@@ -1,8 +1,5 @@
 package com.rebecca.lib.zbase.fragment
 
-import android.os.Bundle
-import android.view.View
-
 abstract class BaseLazyFragment : BaseKtFragment() {
     //=========================  =================================
 
@@ -12,25 +9,19 @@ abstract class BaseLazyFragment : BaseKtFragment() {
     //=========================  =================================
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
-        //setUserVisibleHint()有可能在fragment的生命周期外被调用
-        if (mRootView == null) {
-            return
-        }
         onInit()
     }
 
     override fun onInit() {
-        if (isLoaded == false) {
+        if (isStartInit()) {
             super.onInit()
             isLoaded = true
         }
     }
 
-    //========================= main ==================================
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        if (userVisibleHint) {//默认为可见,正常加载. 需要懒加载时设置为false 则启动懒加载
-            onInit()
-        }
+    open fun isStartInit(): Boolean {//懒加载条件
+        return userVisibleHint && mRootView != null && isLoaded == false
     }
+    //========================= main ==================================
+
 }
